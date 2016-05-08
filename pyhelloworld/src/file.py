@@ -48,6 +48,6 @@ print os.getcwd()
 os.rmdir("tmp")
 
 print "hello test"
-
+print "init test"
 
 
