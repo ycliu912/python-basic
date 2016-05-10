@@ -34,5 +34,10 @@ emp1.age = 7
 emp1.age = 8
 print emp1.age
 del emp1.age
-print emp1.age
+#print emp1.age
+
+hasattr(emp1, 'age')
+#getattr(emp1, 'age')
+setattr(emp1, 'age', 8)
+delattr(emp1, 'age')
 
