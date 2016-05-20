@@ -1,0 +1,4 @@
+[jenkins_conf]
+jenkins_server_url='http://<IP>:<PORT>/'
+user_id='<USER>'
+api_token='<TOKEN>'
