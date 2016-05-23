@@ -14,5 +14,6 @@ f = codecs.open('ok','r', 'utf_8_sig')
 jsonobj = json.load(f)
 #列表用序号来查询
 print jsonobj
+print jsonobj
 #print jsonobj['Key']
 f.close
