@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+#coding:utf-8
+
+def pid_status(PID):
+    print "get_Pid(process_name) = ",PID
+    cmd_pid_status = 'lsof -p %s'%PID
+    #print "cmd_pid_status = ",cmd_pid_status
+   # pid_status01 = os.system(cmd_pid_status)
+    pid_status01 = os.popen(cmd_pid_status).read()
+    #pid_status01 = commands.getoutput('lsof -p %s | wc -l' % (PID))
+    print "pid_status01 = ",pid_status01
+    return "pid_status01",pid_status01
+
+
+def get_pid_status(PID):
+    pid_status02 = pid_status(PID)
+    while (pid_status02 > 0):
+        print "'%s' is on running!"%PID
+        time.sleep(3)
+        pid_status02 = pid_status(PID)
+        if (pid_status02 <= 0):
+            print "'%s' has been stopped."
+            break
+        continue

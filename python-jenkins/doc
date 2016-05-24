@@ -5,3 +5,20 @@ json 语法是JavaScript对象表示法语法的子集。
 *花括号保存对象
 *方括号保存数组
 
+#json --list dict--list[0] dict['kind']
+builds05 = server.get_build_info('test-agency',159)['changeSet']['revisions'][0]['revision']
+src_info= {
+ "building": false, 
+ "queueId": 237, 
+ "displayName": "#159", 
+ "description": null, 
+ "changeSet": {
+  "items": [], 
+  "kind": "svn", 
+  "revisions": [
+   {
+    "module": "svn://***.com/operations/anency160412/agency151228", 
+    "revision": 1708
+   }
+  ]
+ },

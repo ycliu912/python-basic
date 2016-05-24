@@ -1,0 +1,51 @@
+src_info= {
+ "building": false, 
+ "queueId": 237, 
+ "displayName": "#159", 
+ "description": null, 
+ "changeSet": {
+  "items": [], 
+  "kind": "svn", 
+  "revisions": [
+   {
+    "module": "svn://***.com/operations/anency160412/agency151228", 
+    "revision": 1708
+   }
+  ]
+ }, 
+ "artifacts": [], 
+ "timestamp": 1464076877810, 
+ "mavenArtifacts": {}, 
+ "number": 159, 
+ "actions": [
+  {
+   "causes": [
+    {
+     "userName": "admin", 
+     "userId": " admin", 
+     "shortDescription": "Started by user admin"
+    }
+   ]
+  }, 
+  {}, 
+  {}, 
+  {}, 
+  {}
+ ], 
+ "id": "159", 
+ "keepLog": false, 
+ "url": "http://***.com:8082/job/test-agency/159/", 
+ "culprits": [
+  {
+   "absoluteUrl": "http://***.com:8082/user/liuyanchao@douins", 
+   "fullName": "liuyanchao@douins"
+  }
+ ], 
+ "result": "FAILURE", 
+ "executor": null, 
+ "duration": 28277, 
+ "builtOn": "", 
+ "fullDisplayName": "test-agency #159", 
+ "mavenVersionUsed": "3.3.9", 
+ "estimatedDuration": 30893
+}

@@ -1,0 +1,29 @@
+#-*-coding:utf-8 -*-
+#http://python-jenkins.readthedocs.io/en/latest/examples.html
+
+import jenkins as jk
+import json
+import demjson
+import time
+import os
+import ConfigParser
+from xdg.Menu import tmp
+from operator import __eq__
+
+
+
+cf = ConfigParser.ConfigParser()
+cf.read("jenkins.conf")
+
+jenkins_server_url_value = cf.get("jenkins_conf", "jenkins_server_url")
+jenkins_server_url = jenkins_server_url_value.strip('\'"')
+user_id = cf.get("jenkins_conf", "user_id").strip('\'"')
+jenkins_token = cf.get("jenkins_conf","api_token").strip('\'"')
+
+def json_dumps(src_info):
+    jsonDumpsIndentStr = json.dumps(src_info,indent=1)
+    print "src_info=",jsonDumpsIndentStr
+    return;
+
+#实例化jenkins对象，链接远程的jenkins master serversection
+server=jk.Jenkins(jenkins_server_url,username=user_id,password=jenkins_token)
