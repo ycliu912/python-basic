@@ -5,9 +5,11 @@ import jenkins as jk
 import json
 import demjson
 import time
+import os
 import ConfigParser
 from xdg.Menu import tmp
 from operator import __eq__
+
 
 
 cf = ConfigParser.ConfigParser()
@@ -59,12 +61,13 @@ print f.index("actions")
 #json_dumps(tmp)
 
 server.build_job('test-agency')
-
+pid_build = os.getpid()
+print "os.getpid(server.build_job('test-agency')) = ",pid_build
 #print "server.get_running_builds() = ",server.get_running_builds()
 builds = server.get_running_builds()
 builds = demjson.encode(builds)
-print 'builds.find("test-agency")',builds.find("test-agency")
 builds = builds.find("test-agency")
+print 'builds.find("test-agency") = ',builds
 print "server.get_running_builds() type = ",builds
 print "server.get_running_builds().count(test-agency) = ",type(server.get_running_builds().count('test-agency)'))
 print "builds type = ",type("builds")
@@ -93,7 +96,8 @@ builds = json_dumps(builds)
 
 
 #实现判断job正在运行的逻辑，若运行，则给出提示，若一结束，则提示结束并退出
-while (builds > 0):
+#1 job build 后立刻查看没有得到状态
+while (builds > 0 or pid_build > 0):
     print "test-agency is building."
     time.sleep(3)
     builds = server.get_running_builds()
