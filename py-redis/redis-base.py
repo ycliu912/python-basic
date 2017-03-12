@@ -9,6 +9,8 @@
 """
 """
 https://github.com/andymccurdy/redis-py
+http://redis-py.readthedocs.io/en/latest/
+
 """
 
 
